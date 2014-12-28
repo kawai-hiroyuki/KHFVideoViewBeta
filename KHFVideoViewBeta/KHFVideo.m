@@ -13,7 +13,9 @@
 + (KHFVideo *)videoNamed:(NSString *)name
 {
     KHFVideo *video = [[KHFVideo alloc] init];
-    video.name = name;
+    if (video) {
+        video.name = name;
+    }
     return video;
 }
 

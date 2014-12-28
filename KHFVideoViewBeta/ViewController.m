@@ -18,9 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+   
     KHFVideo *video = [KHFVideo videoNamed:@"sample.mp4"];
-    KHFVideoView *videoView = [[KHFVideoView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    KHFVideoView *videoView = [[KHFVideoView alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 20, self.view.frame.size.height / 2)];
+    videoView.backgroundColor = [UIColor blueColor];
     [videoView setVideo:video];
     [self.view addSubview:videoView];
     
